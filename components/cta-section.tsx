@@ -2,13 +2,14 @@
 
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
+import Image from "next/image"
 
 export default function CTASection() {
   return (
     <section className="py-24 relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 z-0">
-        <img src="/tropical-beach-paradise-aerial-view-turquoise-wate.jpg" alt="CTA background" className="w-full h-full object-cover" />
+      <div className="absolute inset-0 z-0 relative">
+        <Image src="/tropical-beach-paradise-aerial-view-turquoise-wate.jpg" alt="CTA background" fill className="object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-accent/80" />
       </div>
 

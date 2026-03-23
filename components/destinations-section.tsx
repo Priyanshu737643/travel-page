@@ -2,6 +2,7 @@
 
 import { Card, CardContent } from "@/components/ui/card"
 import { MapPin, Star } from "lucide-react"
+import Image from "next/image"
 
 const destinations = [
   {
@@ -70,10 +71,11 @@ export default function DestinationsSection() {
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="relative h-64 overflow-hidden">
-                <img
+                <Image
                   src={destination.image || "/placeholder.svg"}
                   alt={destination.name}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-sm px-3 py-1 rounded-full flex items-center gap-1">
                   <Star className="fill-accent text-accent" size={16} />
